@@ -28,6 +28,51 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Set security HTTP headers
 // app.use(helmet());
 
+// const scriptSrcUrls = [
+//   // 'https://api.tiles.mapbox.com/',
+//   'https://api.mapbox.com',
+//   'https://js.stripe.com',
+//   'https://cdnjs.cloudflare.com',
+//   'https://cdn.jsdelivr.net',
+// ];
+// // const styleSrcUrls = [
+// //   'https://api.mapbox.com/',
+// //   'https://api.tiles.mapbox.com/',
+// //   'https://fonts.googleapis.com/',
+// //   'https://cdn.jsdelivr.net',
+// // ];
+// // const connectSrcUrls = [
+// //   'https://api.mapbox.com/',
+// //   'https://a.tiles.mapbox.com/',
+// //   'https://b.tiles.mapbox.com/',
+// //   'https://events.mapbox.com/',
+// // ];
+// const fontSrcUrls = [];
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'", 'https://*.mapbox.com'],
+//       baseUri: ["'self'", 'block-all-mixed-content'],
+//       fontSrc: ["'self'", 'https:', 'data:'],
+//       frameAnestors: ["'self'"],
+//       imgSrc: ["'self'", "'blob'", "'data:'", 'https://images.unsplash.com/'],
+//       objectSrc: ["'self'"],
+//       scriptSrc: [
+//         "'unsafe-inline'",
+//         "'self'",
+//         "'blob'",
+//         'https://cdnjs.cloudflare.com',
+//         'https://cdnjs.cloudflare.com',
+//         'https://api.mapbox.com',
+//         'https://js.stripe.com',
+//       ],
+//       scriptSrcAttr: ["'none'"],
+//       styleSrc: ["'self'", "'unsafe-inline'", 'https:'],
+//       upgradeInsecureRequests: [],
+//     },
+//   })
+// );
+
 // Development logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
